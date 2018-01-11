@@ -13,7 +13,7 @@ See
 
 1. ```cordova plugin add cordova-plugin-dpwechat  --variable wechatappid=YOUR_WECHAT_APPID```,
 
-2. ```导入有智付支付提供的辅助ZFWCPay.jar包放置项目libs中，在build.gradle 进行添加引用
+2. ```导入有智付支付提供的辅助ZFWCPay.jar包放置项目libs中，在build.gradle 进行添加引用```
            dependencies {
             compile files('libs/ZFWCPay.jar')
                }
