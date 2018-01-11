@@ -9,9 +9,9 @@
     <name>Wechat</name>
     <description>A cordova plugin, a JS version of Wechat SDK</description>
     <license>MIT</license>
-    <keywords>cordova,wechat,weixin,share</keywords><!-- 
-    <repo>https://github.com/xu-li/cordova-plugin-dpwechat.git</repo>
-    <issue>https://github.com/xu-li/cordova-plugin-dpwechat/issues</issue> -->
+    <keywords>cordova,wechat,weixin,share</keywords>
+    <repo>https://github.com/mfxscott/cordova-plugin-dpwechat.git</repo>
+    <issue>https://github.com/mfxscott/cordova-plugin-dpwechat/issues</issue>
 
     <!-- add this to your config.xml -->
     <!-- <preference name="WECHATAPPID" value="YOUR_WECHAT_APP_ID_HERE" /> -->
