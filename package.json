@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mfxscott/cordova-plugin-dpwechat/.git"
+    "url": "git+https://github.com/mfxscott/cordova-plugin-dpwechat.git"
   },
   "keywords": [
     "cordova",
@@ -35,7 +35,7 @@
     }
   },
   "author": "mfx",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "bugs": {
     "url": "https://github.com/mfxscott/cordova-plugin-dpwechat/issues"
   },
