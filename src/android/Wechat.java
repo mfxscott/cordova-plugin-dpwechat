@@ -285,7 +285,7 @@ public class Wechat extends CordovaPlugin {
                     cordova.getActivity(),
                     params.getString("token"),//Util.TokeStr + "",
                     params.getString("app_id") + "",
-                    params.getString("merchant_key")+""//"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCI227Y3KxJYEHcHGdKyV6VwofeJiw67F8MLcBgAl3L9MjBHcfM83VfaJBAdugyRS2eQpmeVqGzv7950ml62w7IzcXc9Xn8PQZ9H3w2t539u08MH4VGgtKam/smYgYkeKVmf3BX50ON6IoXeRNbLcoT++wKBggVZHuwQ1tpWYGpuwIDAQAB"
+                    params.getString("merchant_key")+""
                     , new DinPayResultCallback() {
                         @Override
                         public void paySuccess() {
