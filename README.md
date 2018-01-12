@@ -8,7 +8,7 @@ A cordova plugin, a JS version of Wechat SDK
 
 # Example
 
- See  https://github.com/scottma0211/dinpayTrip.git
+ See Example https://github.com/scottma0211/dinpayTrip.git
 
  
 # Install
@@ -20,7 +20,6 @@ A cordova plugin, a JS version of Wechat SDK
 # Usage
 
 # Check if wechat is installed
-```Javascript
 Wechat.isInstalled(function (installed) {
     alert("Wechat installed: " + (installed ? "Yes" : "No"));
 }, function (reason) {
@@ -28,7 +27,7 @@ Wechat.isInstalled(function (installed) {
 });
 
 # 注意事项
- 
+
    IOS 使用Cordova微信支付插件iOS版注意事项：
      1.该插件依赖第三方库文件DPWXPayPlugin.framwork,该文件可在智付官网技术支持下载；
      2.该插件依赖微信官方的一些系统库文件，并需引用OpenSDK1.8.0文件夹内所有文件
@@ -40,8 +39,6 @@ Wechat.isInstalled(function (installed) {
 
 # Send payment request
 
-# Check if wechat is installed
-```Javascript
 // Android
 var params = {
     token: '', // 请求智付支付服务端生成
@@ -60,8 +57,6 @@ Wechat.sendPaymentRequest(params, function () {
       function failFunction(){
           alert("failFunction");
         }
-
-
 
 # FAQ
 
