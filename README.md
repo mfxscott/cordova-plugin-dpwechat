@@ -38,7 +38,6 @@ Wechat.isInstalled(function (installed) {
                }
 
 # Send payment request
-
 // Android
 var params = {
     token: '', // 请求智付支付服务端生成
