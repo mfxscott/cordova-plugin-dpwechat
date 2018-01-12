@@ -18,7 +18,7 @@
         [WXApi registerApp: appId];
     }
     
-    NSLog(@"cordova-plugin-wechat has been initialized. Wechat SDK Version: %@. APP_ID: %@.", [WXApi getApiVersion], appId);
+    NSLog(@"cordova-plugin-dpwechat has been initialized. Wechat SDK Version: %@. APP_ID: %@.", [WXApi getApiVersion], appId);
 }
 #pragma mark "CDVPlugin Overrides"
 - (void)handleOpenURL:(NSNotification *)notification
@@ -51,6 +51,7 @@
 
 #pragma mark - DPWXPayHandle delegate
 - (void)receiveWXPayResDictionary:(NSDictionary *)resDictionary {
+    
     [self sendPaymentRequest:self.command resDictionary:resDictionary];
 
 }
@@ -64,16 +65,7 @@
         [self failWithCallbackID:command.callbackId withMessage:@"参数格式错误"];
         return ;
     }
-    /**
-     {
-     appid = wx32570531eeed3397;
-     noncestr = 1515726668017;
-     package = "Sign=WXPay";
-     partnerid = 46426739;
-     prepayid = wx20180112111107fc586ffe680820985075;
-     sign = 9C36D8424737E15CCFEC613E08830964;
-     }
-     */
+    
     // check required parameters
     NSArray *requiredParams;
     if ([params objectForKey:@"mch_id"])
