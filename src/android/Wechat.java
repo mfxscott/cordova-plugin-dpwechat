@@ -1,6 +1,7 @@
 package zf.dinpay.cordova.wechat;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -267,10 +268,6 @@ public class Wechat extends CordovaPlugin {
     }
 
     protected boolean sendPaymentRequest(CordovaArgs args, CallbackContext callbackContext) {
-
-        final IWXAPI api = getWxAPI(cordova.getActivity());
-
-        // check if # of arguments is correct
         final JSONObject params;
         try {
             params = args.getJSONObject(0);
@@ -278,20 +275,16 @@ public class Wechat extends CordovaPlugin {
             callbackContext.error(ERROR_INVALID_PARAMETERS);
             return true;
         }
-
-        PayReq req = new PayReq();
         try {
             DinPayChannel.getInstance().startPayByDinPay(
                     cordova.getActivity(),
-                    params.getString("token"),//Util.TokeStr + "",
-                    params.getString("app_id") + "",
-                    params.getString("merchant_key")+""
+                    params.getString("token"),
+                    params.getString("app_id") + ""
                     , new DinPayResultCallback() {
                         @Override
                         public void paySuccess() {
                             sendNoResultPluginResult(callbackContext);
                         }
-
                         @Override
                         public void payFailure(String s) {
                             callbackContext.error(s+"");
@@ -301,34 +294,11 @@ public class Wechat extends CordovaPlugin {
                             callbackContext.error("取消支付");
                         }
                     });
-
-
-//            req.appId = getAppId();
-//            req.partnerId = params.has("mch_id") ? params.getString("mch_id") : params.getString("partnerid");
-//            req.prepayId = params.has("prepay_id") ? params.getString("prepay_id") : params.getString("prepayid");
-//            req.nonceStr = params.has("nonce") ? params.getString("nonce") : params.getString("noncestr");
-//            req.timeStamp = params.getString("timestamp");
-//            req.sign = params.getString("sign");
-//            req.packageValue = "Sign=WXPay";
         } catch (Exception e) {
             Log.e(TAG, e.getMessage());
-
             callbackContext.error(ERROR_INVALID_PARAMETERS);
             return true;
         }
-//
-//        if (api.sendReq(req)) {
-//            Log.i(TAG, "Payment request has been sent successfully.");
-//
-//            // send no result
-//            sendNoResultPluginResult(callbackContext);
-//        } else {
-//            Log.i(TAG, "Payment request has been sent unsuccessfully.");
-//
-//            // send error
-//            callbackContext.error(ERROR_SEND_REQUEST_FAILED);
-//        }
-
         return true;
     }
 

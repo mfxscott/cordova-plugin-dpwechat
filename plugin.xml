@@ -26,7 +26,7 @@
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="Wechat">
-                <param name="ios-package" value="CDVWechat"/>
+                <param name="ios-package" value="DPWXPay"/>
                 <param name="onload" value="true" />
             </feature>
             <preference name="WECHATAPPID" value="$WECHATAPPID"/>
@@ -61,8 +61,8 @@
         </config-file>
 
         <!-- Plugin source code -->
-        <header-file src="src/ios/CDVWechat.h" />
-        <source-file src="src/ios/CDVWechat.m" />
+        <header-file src="src/ios/DPWXPay.h" />
+        <source-file src="src/ios/DPWXPay.m" />
 
         <!-- Wechat Official -->
         <header-file src="src/ios/libs/OpenSDK1.8.0/WXApi.h" />

@@ -34,8 +34,7 @@ Wechat.isInstalled(function (installed) {
 // See
 var params = {
     token: '', // 请求智付支付服务端生成
-    app_id: '', // 微信应用APPID
-    marchant_key: '', // 智付商户秘钥    
+    app_id: '' // 微信应用APPID
 };
 Wechat.sendPaymentRequest(params, function () {
     alert("Success");
