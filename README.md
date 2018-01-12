@@ -26,6 +26,7 @@ Wechat.isInstalled(function (installed) {
 }, function (reason) {
     alert("Failed: " + reason);
 });
+
 # 注意事项
  
    IOS 使用Cordova微信支付插件iOS版注意事项：
@@ -38,6 +39,9 @@ Wechat.isInstalled(function (installed) {
                }
 
 # Send payment request
+
+# Check if wechat is installed
+```Javascript
 // Android
 var params = {
     token: '', // 请求智付支付服务端生成
@@ -56,7 +60,7 @@ Wechat.sendPaymentRequest(params, function () {
       function failFunction(){
           alert("failFunction");
         }
-```
+
 
 
 # FAQ
