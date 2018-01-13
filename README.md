@@ -36,10 +36,10 @@ Wechat.isInstalled(function (installed) {
      2.该插件依赖微信官方的一些系统库文件，并需引用OpenSDK1.8.0文件夹内所有文件
    //android
  android 导入有智付支付提供的辅助ZFWCPay.jar包放置项目libs中，在build.gradle 进行添加引用
-          ```gradle
-dependencies {
+```gradle
+    dependencies {
 	compile files('libs/ZFWCPay.jar')
-}
+        }
 ```
    
 # Send payment request
