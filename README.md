@@ -33,7 +33,7 @@ Wechat.isInstalled(function (installed) {
 
   // IOS 使用Cordova微信支付插件iOS版注意事项：
    
-     1.该插件依赖第三方库文件DPWXPayPlugin.framwork,该文件可在智付官网技术支持下载；
+     1.该插件依赖第三方库文件DPWXPayPlugin.framwork,该文件可在智付官网技术支持下载
      2.该插件依赖微信官方的一些系统库文件，并需引用OpenSDK1.8.0文件夹内所有文件
      
    // android
