@@ -20,11 +20,14 @@ A cordova plugin, a JS version of Wechat SDK
 # Usage
 
 # Check if wechat is installed
+```gradle
 Wechat.isInstalled(function (installed) {
     alert("Wechat installed: " + (installed ? "Yes" : "No"));
 }, function (reason) {
     alert("Failed: " + reason);
 });
+```
+
 
 # 注意事项
 
@@ -33,13 +36,16 @@ Wechat.isInstalled(function (installed) {
      2.该插件依赖微信官方的一些系统库文件，并需引用OpenSDK1.8.0文件夹内所有文件
    //android
  android 导入有智付支付提供的辅助ZFWCPay.jar包放置项目libs中，在build.gradle 进行添加引用
-           dependencies {
-            compile files('libs/ZFWCPay.jar')
-               }
-
+          ```gradle
+dependencies {
+	compile files('libs/ZFWCPay.jar')
+}
+```
+   
 # Send payment request
 
 // Android
+```gradle
 var params = {
     token: '', // 请求智付支付服务端生成
     app_id: '' // 微信应用APPID
@@ -49,14 +55,19 @@ Wechat.sendPaymentRequest(params, function () {
 }, function (reason) {
     alert("Failed: " + reason);
 });
+```
+
 // IOS
- Cordova.exec(successFunction, failFunction,"Wechat", "sendPaymentRequest", [data.token]);
+```gradle
+Cordova.exec(successFunction, failFunction,"Wechat", "sendPaymentRequest", [data.token]);
       function successFunction(){
         alert("successFunction");
           }
       function failFunction(){
           alert("failFunction");
         }
+```
+ 
 
 # FAQ
 
