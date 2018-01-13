@@ -31,11 +31,15 @@ Wechat.isInstalled(function (installed) {
 
 # 注意事项
 
-   IOS 使用Cordova微信支付插件iOS版注意事项：
+  // IOS 使用Cordova微信支付插件iOS版注意事项：
+   
      1.该插件依赖第三方库文件DPWXPayPlugin.framwork,该文件可在智付官网技术支持下载；
      2.该插件依赖微信官方的一些系统库文件，并需引用OpenSDK1.8.0文件夹内所有文件
-   //android
- android 导入有智付支付提供的辅助ZFWCPay.jar包放置项目libs中，在build.gradle 进行添加引用
+     
+   // android
+   
+   android 导入有智付支付提供的辅助ZFWCPay.jar包放置项目libs中，在build.gradle 进行添加引用
+   
 ```gradle
     dependencies {
 	compile files('libs/ZFWCPay.jar')
